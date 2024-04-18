@@ -1,10 +1,14 @@
 {
   "name": "challenge-task",
   "version": "1.0.0",
-  "description": "This project is a challenge for the Dev.Pro test engineer",
-  "main": "index.js",
+  "description": "This project is a challenge for test engineer",
+  "main": "./application/application.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "application": "node application/application.js ",
+    "tests": "jest --silent --coverage",
+    "unitTests": "jest tests/unit-tests --silent --coverage",
+    "integrationTests": "jest tests/integration-tests --silent --coverage", 
+    "lint": "npx eslint ."
   },
   "repository": {
     "type": "git",
@@ -28,6 +32,7 @@
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-promise": "^6.1.1",
     "globals": "^15.0.0",
-    "jest": "^29.7.0"
+    "jest": "^29.7.0",
+    "mock-fs": "^5.2.0"
   }
 }
