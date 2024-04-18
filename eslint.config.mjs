@@ -12,6 +12,10 @@ const compat = new FlatCompat({ baseDirectory: __dirname, recommendedConfig: plu
 
 export default [
   { files: ['**/*.js'], languageOptions: { sourceType: 'commonjs' } },
-  { languageOptions: { globals: globals.browser } },
-  ...compat.extends('standard')
+  { files: ['**/*.js'], languageOptions: { globals: globals.browser } },
+  { files: ['**/*.js'], languageOptions: { globals: globals.jest } },
+  {ignores: ["eslint.config.mjs"]},
+  ...compat.extends('standard'),
+
+  
 ]

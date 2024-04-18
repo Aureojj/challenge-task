@@ -1,2 +1,4 @@
 node_modules
 application.log
+applicationTest.log
+coverage
